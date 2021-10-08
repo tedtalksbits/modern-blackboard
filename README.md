@@ -17,3 +17,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ![picture alt](https://raw.githubusercontent.com/tedtalksbits/modern-blackboard/main/src/images/business-3d-casual-life-3d-freelancer.png "Illustration by Icons 8 from Ouch!")
+
+
+[Illustration by](https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6 "artwork")
