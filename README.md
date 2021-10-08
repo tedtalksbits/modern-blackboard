@@ -1,5 +1,7 @@
 # Building a modern looking BlackBoard webapp 📝
 
+![picture alt](https://raw.githubusercontent.com/tedtalksbits/modern-blackboard/main/src/images/Screen%20Shot%202021-10-08%20at%204.44.41%20PM.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## tech used
