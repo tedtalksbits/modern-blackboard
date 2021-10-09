@@ -41,26 +41,27 @@ const EditButton = styled.button`
    cursor: pointer;
    transition: box-shadow .3s ease;
    position: relative;
+   transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
 
-   & .animate{
+   
 
-      animation: fadein .4s linear;
-   }
+   &.animate{ 
+         animation: fadeIn linear .5s;
+      }
+  
+   
 
    @keyframes fadeIn {
   0% {
-     opacity: 0;
-     bottom: 0;
+     opacity: 1;
      transform: scale(1);
   }
   39% {
-     opacity: 1;
-     bottom: -12px;
-     transform: scale(1.01);
+     opacity: 0;
+     transform: scale(1.21);
   }
   100%{
      opacity: 1;
-     bottom: 0;
      transform: scale(1);
   }
 } 
@@ -68,7 +69,7 @@ const EditButton = styled.button`
    /* border: none; */
    
    :hover{
-      box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.14) , 0px 3px 1px -2px rgba(0,0,0,0.12) , 0px 1px 5px 0px rgba(0,0,0,0.2) ;
+      box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.06) , 0px 3px 1px -2px rgba(0,0,0,0.05) , 0px 1px 5px 0px rgba(0,0,0,0.09) ;
    }
    
    i{
@@ -132,8 +133,22 @@ const EditableCard = ({ date, title, innerBg, cardBg }) => {
       console.log(open);
    }
 
+
    const animate = (e) => {
-      console.log(e)
+
+      let animItem = e.target;
+
+      if (animItem.classList.contains('animate')) {
+
+         animItem.classList.remove('animate')
+
+      }
+      else {
+
+         animItem.classList.add('animate');
+
+      }
+
    }
    return (
       <Wrapper cardBg={cardBg}  >
@@ -157,9 +172,9 @@ const EditableCard = ({ date, title, innerBg, cardBg }) => {
                </Info>
             </LeftContent>
             <RightContent>
-               <EditButton onClick={(e) => {
+               <EditButton onClick={(el) => {
                   handleModalOpen();
-                  animate();
+                  animate(el);
                }} >
                   <i className='bx bx-dots-vertical-rounded'></i>
                </EditButton>

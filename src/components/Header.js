@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { H1, LightP } from './pageElement'
+import Searchbar from './Searchbar'
 
 const MainHeader = styled.header`
    display: flex;
@@ -28,8 +29,9 @@ const Header = () => {
             <a href="#jobs">jobs</a>
          </div>
          <div className="header__right">
-            search
-            <i className='bx bx-search-alt' ></i>
+            <form >
+               <Searchbar />
+            </form>
 
          </div>
       </MainHeader>

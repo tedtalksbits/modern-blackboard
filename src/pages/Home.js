@@ -8,8 +8,7 @@ import loadingImg from '../images/Spin-1s-200px.svg';
 import comingSoonImg from '../images/casual-life-3d-clock.png'
 import ReactTimeago from 'react-timeago';
 import PageImage from '../components/PageImage';
-import Notification from '../components/Notification';
-import AnimatedNotfication from '../components/AnimatedNotfication';
+import Notifs from '../components/Notifs';
 
 const Home = () => {
    useEffect(() => {
@@ -19,7 +18,6 @@ const Home = () => {
 
    const [courses, setCourses] = useState([])
    const [isLoading, setIsLoading] = useState(true)
-   const [isOpen, setIsOpen] = useState(true)
 
    const URL = "https://college-courses-api.herokuapp.com/courses_data"
    async function fetchData() {
@@ -33,7 +31,15 @@ const Home = () => {
    }
 
    const NotifArray = [
-      0, 1, 2, 3
+      {
+         title: "Get this done ASAP",
+         urgent: true
+      },
+      {
+         title: "You have time",
+         urgent: false
+      }
+
    ]
 
 
@@ -53,11 +59,19 @@ const Home = () => {
          <h1>Notifcations</h1>
          <Container>
 
-            <Notification innerBg={homeTheme.primary} title="1" />
-            <Notification innerBg={homeTheme.gradientdark} title="2" />
-            <Notification innerBg={homeTheme.secondary} title="3" />
-            {/* <AnimatedNotfication /> */}
+            <Notifs bgColor={homeTheme.primary} text={<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, fuga! Sequi odit id perferendis consequatur illo quasi saepe labore totam impedit distinctio omnis voluptatum in reiciendis quibusdam cum, dignissimos officiis!😄</p>} />
+            <Notifs bgColor={homeTheme.secondary} text="2✅" />
+            <Notifs bgColor="#da3456" text="3⭐️" />
+            <Notifs text="4😢" />
+            {NotifArray.map((notif, index) => (
+               notif.urgent ?
 
+
+                  <Notifs key={index} text={notif.title} bgColor="#da3456" />
+                  :
+                  <Notifs key={index} text={notif.title} bgColor="#34da9d" />
+
+            ))}
 
 
          </Container>
