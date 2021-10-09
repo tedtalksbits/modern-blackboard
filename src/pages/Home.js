@@ -8,6 +8,8 @@ import loadingImg from '../images/Spin-1s-200px.svg';
 import comingSoonImg from '../images/casual-life-3d-clock.png'
 import ReactTimeago from 'react-timeago';
 import PageImage from '../components/PageImage';
+import Notification from '../components/Notification';
+import AnimatedNotfication from '../components/AnimatedNotfication';
 
 const Home = () => {
    useEffect(() => {
@@ -17,6 +19,7 @@ const Home = () => {
 
    const [courses, setCourses] = useState([])
    const [isLoading, setIsLoading] = useState(true)
+   const [isOpen, setIsOpen] = useState(true)
 
    const URL = "https://college-courses-api.herokuapp.com/courses_data"
    async function fetchData() {
@@ -28,6 +31,12 @@ const Home = () => {
       setCourses(result);
       setIsLoading(false)
    }
+
+   const NotifArray = [
+      0, 1, 2, 3
+   ]
+
+
    return (
       <Page>
          <Container>
@@ -40,6 +49,17 @@ const Home = () => {
                gDark={homeTheme.gradientdark}
                alpha={homeTheme.alpha}
             />
+         </Container>
+         <h1>Notifcations</h1>
+         <Container>
+
+            <Notification innerBg={homeTheme.primary} title="1" />
+            <Notification innerBg={homeTheme.gradientdark} title="2" />
+            <Notification innerBg={homeTheme.secondary} title="3" />
+            {/* <AnimatedNotfication /> */}
+
+
+
          </Container>
          <h1>Courses</h1>
          {isLoading ?

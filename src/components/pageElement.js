@@ -60,3 +60,46 @@ export const LoadingImageContainer = styled.div`
    place-items: center;
 
 `
+
+export const InnerBox = styled.div`
+   width: ${({ notification }) => notification ? '' : '4rem'};
+   height: ${({ notification }) => notification ? '' : '4rem'};
+   padding: ${({ notification }) => (notification ? '1rem' : '')};
+   margin-bottom: ${({ notification }) => (notification ? '1.1rem' : '')};
+   background: ${props => props.innerBg + "a6"};
+   border-radius: 1rem;
+   display: ${({ notification }) => (notification ? 'block' : 'grid')};
+   place-items: center;
+   border: 1px solid ${props => props.innerBg};
+   transition: all ease-in-out .2s;
+   animation: ${({ open }) => open ? 'slideAway .8s ease  forwards' : ''} ;
+   position: relative;
+
+
+   
+
+   @keyframes slideAway {
+      0% {
+         opacity: 1;
+      }
+      15% {
+         transform: scale(1.2);
+         opacity: 1;
+      }
+      75% {
+         opacity: 0;
+      }
+      100% {
+         transform: scale(0);
+         opacity: 0;
+
+      }
+   }
+
+:hover{
+   background: ${props => props.innerBg};
+   transform: ${({ notification }) => (notification ? '' : 'scale(1.1)')}
+   
+}
+
+`
