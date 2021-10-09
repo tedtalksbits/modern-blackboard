@@ -9,6 +9,9 @@ function App() {
     <Router>
 
       <div className="app">
+        <div id="modal">
+        </div>
+
         <Header />
         <Switch>
           <Route path="/" component={Home} exact />

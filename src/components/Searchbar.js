@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
-const Container = styled.div`
+const Container = styled.form`
    display: flex;
    padding: 9px .875rem;
    border: 1px black solid;
    border-radius: 5px;
    gap: 7px;
-   margin: 0 1rem;
    align-items: center;
    transition: all .5s ease;
    color: black;
+   position: relative;
 
    &:hover, &:active{
       background: #212121;
@@ -37,16 +37,46 @@ const Container = styled.div`
 
 `
 const Searchbar = () => {
+   const change = (e) => {
+      console.log(e.target.value);
+   }
+
+   const [showText, setShowText] = useState(false);
+   const focus = (e) => {
+      console.log("focused")
+      setShowText(!showText);
+      setTimeout(() => {
+         setShowText(false)
+      }, 3000)
+   }
+
+   const [inputVal, setInputVal] = useState("");
+
+
    return (
-      <Container>
+
+      <Container onSubmit={(e) => {
+         e.preventDefault();
+         console.table(inputVal, "<- value submitted");
+         setInputVal('')
+      }}>
+
          <i className="bx bx-search-alt"></i>
          <input
             type="search"
             name="search"
             className="search_input"
             placeholder="search"
+            onChange={(e) => setInputVal(e.target.value)}
+            onFocus={focus}
+            value={inputVal}
+
+
+
          />
+         {showText ? <p style={{ position: 'absolute', bottom: '-20px', left: 0 }}>press enter to submit</p> : null}
       </Container>
+
    )
 }
 

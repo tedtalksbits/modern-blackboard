@@ -88,6 +88,7 @@ const MoreInfo = ({ match }) => {
                            date={assignment.assignment_due_date}
                            innerBg={courseThemes[index].alpha}
                            cardBg={courseThemes[index].pastel}
+                           open_up={true}
                         />
                         :
                         <EditableCard

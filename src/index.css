@@ -27,3 +27,11 @@ code {
 .closed{
   display: none;
 }
+.modal{
+  background: #00000014;
+  backdrop-filter: blur(0px) saturate(0.5);
+  position: absolute;
+  z-index: 1999;
+  height: 100%;
+  width: 100%;
+}

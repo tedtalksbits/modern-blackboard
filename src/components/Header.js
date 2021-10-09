@@ -21,6 +21,7 @@ const MainHeader = styled.header`
 `
 
 const Header = () => {
+
    return (
       <MainHeader className="header">
          <div className="header__left">
@@ -29,9 +30,9 @@ const Header = () => {
             <a href="#jobs">jobs</a>
          </div>
          <div className="header__right">
-            <form >
-               <Searchbar />
-            </form>
+
+            <Searchbar />
+
 
          </div>
       </MainHeader>

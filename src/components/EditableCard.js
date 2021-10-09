@@ -45,20 +45,18 @@ const EditButton = styled.button`
 
    
 
-   &.animate{ 
-         animation: fadeIn linear .5s;
-      }
-  
-   
-
    @keyframes fadeIn {
   0% {
-     opacity: 1;
-     transform: scale(1);
+     opacity: 0;
+     
   }
   39% {
      opacity: 0;
-     transform: scale(1.21);
+     transform: scale(.9);
+  }
+  60% {
+     opacity: 0.875;
+     transform: scale(1.03);
   }
   100%{
      opacity: 1;
@@ -78,20 +76,21 @@ const EditButton = styled.button`
 `
 const EditModal = styled.div`
    display: ${({ modalOpen }) => modalOpen ? 'block' : 'none'};
+   z-index: ${({ modalOpen }) => modalOpen ? '2000' : ''};
    position: absolute;
    background: #15192598;
    border-radius: 5px;
-   border: 1px rgba(255,255,255, 0.2);
+   border: 1px rgba(0,0,0, 0.2) solid;
    backdrop-filter: blur(25px);
    padding: .5rem;
-   top: 0;
-   left: 0;
+   top: -50px;
+   right: 0;
    color: white;
+   animation: fadeIn .4s linear;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
-  
 
 `
-
 const HomeworkIcon = styled.div`
    width: 4rem;
    height: 4rem;
@@ -122,36 +121,32 @@ const EditableCard = ({ date, title, innerBg, cardBg }) => {
 
    const [open, setOpen] = useState(false)
 
+
    const handleModalOpen = () => {
-      setOpen(!open)
-      // console.log(open)
+      setOpen(true)
+      const modalBg = document.getElementById('modal');
+      modalBg.classList.add('modal')
 
    }
-   const closeModal = () => {
+   const closeModal = (e) => {
       if (open === true)
          setOpen(false);
-      console.log(open);
-   }
 
 
-   const animate = (e) => {
 
-      let animItem = e.target;
+      const modalBg = document.getElementById('modal');
+      modalBg.addEventListener('click', () => {
+         modalBg.classList.remove('modal')
+         setOpen(false)
+      })
 
-      if (animItem.classList.contains('animate')) {
 
-         animItem.classList.remove('animate')
-
-      }
-      else {
-
-         animItem.classList.add('animate');
-
-      }
 
    }
+
+
    return (
-      <Wrapper cardBg={cardBg}  >
+      <Wrapper cardBg={cardBg} >
          <Container>
             <LeftContent>
                <HomeworkIcon innerBg={innerBg}>
@@ -172,20 +167,22 @@ const EditableCard = ({ date, title, innerBg, cardBg }) => {
                </Info>
             </LeftContent>
             <RightContent>
-               <EditButton onClick={(el) => {
-                  handleModalOpen();
-                  animate(el);
+               <EditButton onClick={(e) => {
+                  handleModalOpen(e);
+                  closeModal(e);
                }} >
                   <i className='bx bx-dots-vertical-rounded'></i>
                </EditButton>
             </RightContent>
+
             <EditModal modalOpen={open}>
                <p>Lorem ipsum dolor sit amet consectetur, </p>
                <p>adipisicing elit. Incidunt illo rerum molestiae ut </p>
                <p>et accusantium excepturi magnam labore a iste.</p>
             </EditModal>
+
          </Container>
-      </Wrapper>
+      </Wrapper >
    )
 }
 
