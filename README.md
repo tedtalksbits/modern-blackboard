@@ -13,9 +13,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  ## topics I'm practicing: 
 
    - [x] API / DB creation  👨🏿‍💻
-   - [x] Custom UI 🖥
-   - [ ] CRUD
-   - [ ] BlackBoard API Navigation
+   - [x] Custom UI Components 🖥
+   - [x] Notification ✅
+   - [x] Routing 🔗
+   - [] DRY CODE 🧼
+   - [ ] CRUD 🪜
+   - [ ] BlackBoard API Navigation 🌐
 
 
 ![picture alt](https://raw.githubusercontent.com/tedtalksbits/modern-blackboard/main/src/images/business-3d-casual-life-3d-freelancer.png "Illustration by Icons 8 from Ouch!")

@@ -58,7 +58,6 @@ const Home = () => {
          </Container>
          <h1>Notifcations</h1>
          <Container>
-
             <Notifs
                bgColor={homeTheme.primary}
                text=
