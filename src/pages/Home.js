@@ -59,10 +59,18 @@ const Home = () => {
          <h1>Notifcations</h1>
          <Container>
 
-            <Notifs bgColor={homeTheme.primary} text={<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, fuga! Sequi odit id perferendis consequatur illo quasi saepe labore totam impedit distinctio omnis voluptatum in reiciendis quibusdam cum, dignissimos officiis!😄</p>} />
-            <Notifs bgColor={homeTheme.secondary} text="2✅" />
+            <Notifs
+               bgColor={homeTheme.primary}
+               text=
+               {
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, fuga! Sequi odit id perferendis consequatur illo quasi saepe labore totam impedit distinctio omnis voluptatum in reiciendis quibusdam cum, dignissimos officiis!😄</p>
+               }
+            />
+            <Notifs bgColor={homeTheme.secondary} text={<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint.😍</p>} />
             <Notifs bgColor="#da3456" text="3⭐️" />
             <Notifs text="4😢" />
+
+            <h1>conditional notifications</h1>
             {NotifArray.map((notif, index) => (
                notif.urgent ?
 

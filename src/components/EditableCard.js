@@ -82,7 +82,7 @@ const EditModal = styled.div`
    border-radius: 5px;
    border: 1px rgba(0,0,0, 0.2) solid;
    backdrop-filter: blur(25px);
-   padding: .5rem;
+   padding: .875rem;
    top: -50px;
    right: 0;
    color: white;
