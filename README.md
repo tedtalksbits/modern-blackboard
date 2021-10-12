@@ -16,7 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
    - [x] Custom UI Components 🖥
    - [x] Notification ✅
    - [x] Routing 🔗
-   - [] DRY CODE 🧼
+   - [ ] DRY CODE 🧼
    - [ ] CRUD 🪜
    - [ ] BlackBoard API Navigation 🌐
 

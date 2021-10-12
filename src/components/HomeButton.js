@@ -9,7 +9,6 @@ const A = styled(Link)`
 
 const Icon = styled.div`
    i {
-
      
       color: white;
       font-size: 2.5rem;

@@ -70,7 +70,7 @@ const Notifs = ({ text, bgColor }) => {
       setIsClosed(!isClosed)
    }
 
-   // state for noticfication removal from HTML flow after time has passed
+   // state & function for noticfication removal from HTML flow after time has passed
    const [elementRemoval, setElementRemoval] = useState(false)
 
    const handleRemoveElement = () => {

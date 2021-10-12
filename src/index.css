@@ -35,3 +35,11 @@ code {
   height: 100%;
   width: 100%;
 }
+.active{
+  border-bottom: 3px rgba(0, 0, 0, 0.26) solid;
+  padding-top: 10px;
+  transition: all .3s ease;
+}
+.fooh{
+  background-color: aqua;
+}
