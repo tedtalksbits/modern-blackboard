@@ -23,13 +23,6 @@ const MainHeader = styled.header`
       height: 2rem;
    }
 
-   animation: ${({ animate }) => animate ? 'fadeAway .5s ease forwards' : ''};
-
-   @keyframes fadeAway {
-      0% {opacity: 1};
-      100%  {opacity: 0};
-   }
-
 `
 const NavBarContainer = styled.nav`
    position: relative;
@@ -77,23 +70,27 @@ const Header = () => {
             </NavBar>
          </NavBarContainer>
 
+         {showJobLink ?
 
 
+            <MainHeader className="header">
+               <div className="header__left">
+                  <H1>Fall 2021</H1>
+                  <LightP>T.Blake</LightP>
 
-         <MainHeader animate={showJobLink ? false : true}>
-            <div className="header__left">
-               <H1>Fall 2021</H1>
-               <LightP>T.Blake</LightP>
+               </div>
+               <div className="header__right">
 
-            </div>
-            <div className="header__right">
-
-               <Searchbar />
+                  <Searchbar />
 
 
-            </div>
-         </MainHeader>
+               </div>
+            </MainHeader>
+            :
 
+
+            ''
+         }
       </>
 
    )
