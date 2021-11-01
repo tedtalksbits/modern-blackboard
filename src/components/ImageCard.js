@@ -4,7 +4,7 @@ import EmailButton from './EmailButton'
 import { LightP } from './pageElement'
 
 const MainImageCard = styled.div`
-   border-radius: 2rem;
+   border-radius: 12px;
    background: ${props => `linear-gradient(145deg, ${props.gLight} 0%, ${props.gDark} 100%)`};
    width: 100%;
    height: 100%;

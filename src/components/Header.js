@@ -42,7 +42,7 @@ const NavBar = styled.div`
    justify-content: center;
    gap: 4rem;
    z-index: 2001;
-   box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 1px 0px;
+   /* box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 1px 0px; */
    transition: all ease .4s;
 
    :hover{
@@ -70,27 +70,22 @@ const Header = () => {
             </NavBar>
          </NavBarContainer>
 
-         {showJobLink ?
 
 
-            <MainHeader className="header">
-               <div className="header__left">
-                  <H1>Fall 2021</H1>
-                  <LightP>T.Blake</LightP>
 
-               </div>
-               <div className="header__right">
+         <MainHeader className="header">
+            <div className="header__left">
+               <H1>Fall 2021</H1>
+               <LightP>T.Blake</LightP>
 
-                  <Searchbar />
+            </div>
+            <div className="header__right">
 
-
-               </div>
-            </MainHeader>
-            :
+               <Searchbar />
 
 
-            ''
-         }
+            </div>
+         </MainHeader>
       </>
 
    )

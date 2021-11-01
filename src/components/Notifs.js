@@ -11,6 +11,7 @@ const Notification = styled.div`
    backdrop-filter: blur(25px) saturation(200%);
    position: relative;
    transition: all ease-in-out .5s;
+   cursor: pointer;
 
    /* animate when true */
    animation: ${({ toggleAnimation }) => toggleAnimation ? 'slideAway .8s ease forwards' : ''};
@@ -40,6 +41,7 @@ const Notification = styled.div`
 `
 const NotifText = styled.div`
    width: 90%;
+   color: white;
    
 `
 const CloseButton = styled.div`
@@ -61,7 +63,7 @@ const CloseIcon = styled.i`
    font-size: 1.7rem;
 `
 
-const Notifs = ({ text, bgColor }) => {
+const Notifs = ({ text, bgColor, subText }) => {
 
    // state for notification removal via animation (does not remove from HTML flow)
    const [isClosed, setIsClosed] = useState(false);
@@ -82,7 +84,8 @@ const Notifs = ({ text, bgColor }) => {
       // when isClosed == true ? toggleAnimation == true
       <Notification toggleAnimation={isClosed} removeElement={elementRemoval} bgColor={bgColor} >
          <NotifText>
-            {text}
+            <h1>{text}</h1>
+            <p>{subText}</p>
          </NotifText>
          <CloseButton onClick={() => {
             handleClose();

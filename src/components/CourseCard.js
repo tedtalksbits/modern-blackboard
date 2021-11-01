@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import image from '../images/business-3d-368.png'
 import { H1, LightP } from './pageElement'
 const MainCourseCard = styled.div`
-   border-radius: 2.875rem;
+   border-radius: 12px;
    background: white;
    width: 100%;
    height: 100%;

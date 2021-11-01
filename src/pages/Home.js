@@ -17,6 +17,7 @@ const Home = () => {
    }, [])
 
    const [courses, setCourses] = useState([])
+   const [assignments, setAssignments] = useState([]);
    const [isLoading, setIsLoading] = useState(true)
 
    const URL = "https://college-courses-api.herokuapp.com/courses_data"
@@ -25,9 +26,23 @@ const Home = () => {
          method: 'GET',
       })
       const result = await response.json();
-      console.log(result);
+      // console.log(result);
       setCourses(result);
       setIsLoading(false)
+
+      let assArr = [];
+
+      result.forEach(res => {
+
+
+         assArr.push(...res.course_assignments)
+
+
+      })
+
+      console.log(assArr);
+      setAssignments(assArr)
+
    }
 
    const NotifArray = [
@@ -57,32 +72,24 @@ const Home = () => {
             />
          </Container>
          <h1>Notifcations</h1>
+
+
          <Container>
-            <Notifs
-               bgColor={homeTheme.primary}
-               text=
-               {
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, fuga! Sequi odit id perferendis consequatur illo quasi saepe labore totam impedit distinctio omnis voluptatum in reiciendis quibusdam cum, dignissimos officiis!😄</p>
-               }
-            />
-            <Notifs bgColor={homeTheme.secondary} text={<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint.😍</p>} />
-            <Notifs bgColor="#da3456" text="3⭐️" />
-            <Notifs text="4😢" />
+            {assignments.map((assi, index) => (
+               assi.assignment_title ?
 
-            <h1>conditional notifications</h1>
-            {NotifArray.map((notif, index) => (
-               notif.urgent ?
-
-
-                  <Notifs key={index} text={notif.title} bgColor="#da3456" />
+                  <Notifs
+                     key={index}
+                     text={assi.assignment_title}
+                     subText={assi.assignment_due_date}
+                     bgColor={assi.urgent ? `#cb3457` : `#3ccddd`}
+                  />
                   :
-                  <Notifs key={index} text={notif.title} bgColor="#34da9d" />
-
+                  ''
             ))}
 
-
          </Container>
-         <h1>Courses</h1>
+         <h1>Current Courses</h1>
          {isLoading ?
             <LoadingImageContainer>
 

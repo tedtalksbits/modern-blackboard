@@ -6,7 +6,7 @@ import { LightP } from './pageElement'
 const Container = styled.section`
    background: white;
    width: 100%;
-   border-radius: 2rem;
+   border-radius: 12px;
    padding: 2rem;
 `
 const Content = styled.div`
