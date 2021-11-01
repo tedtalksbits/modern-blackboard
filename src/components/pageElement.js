@@ -18,6 +18,24 @@ export const Page = styled.section`
 
 `
 
+export const Wrapper = styled.div`
+
+
+display: grid;
+grid-template-columns: 1fr min(99ch, 100%) 1fr;
+width: 100%;
+
+   >*{
+      grid-column: 2;
+   }
+   >*.full-bleed {
+      width:100%;
+      grid-column: 1 / 4;
+   }
+
+`
+
+
 export const Container = styled.div`
    margin: ${props => props.margin || '2.5rem 0'};
 

@@ -15,9 +15,9 @@ function App() {
 
         <Header />
         <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/moreinfo/:id :name" component={MoreInfo} />
-          <Route path="/admin" component={Admin} />
+          <Route path="/modern-blackboard" component={Home} exact />
+          <Route path="/modern-blackboard/moreinfo/:id :name" component={MoreInfo} />
+          <Route path="/modern-blackboard/admin" component={Admin} />
         </Switch>
       </div>
     </Router>

@@ -21,6 +21,7 @@ const MainHeader = styled.header`
       gap: .5rem;
       align-items: center;
       height: 2rem;
+      width: 100%;
    }
 
 `
@@ -64,8 +65,8 @@ const Header = () => {
          <NavBarContainer >
             <NavBar >
                {showJobLink ? <a href="#jobs">Jobs</a> : ''}
-               <NavBarLink linkTo="/" linkTitle="Home" clickFunc={() => setShowJobLink(true)} />
-               <NavBarLink linkTo="/admin" linkTitle="Admin" clickFunc={() => setShowJobLink(false)} />
+               <NavBarLink linkTo="/modern-blackboard" linkTitle="Home" clickFunc={() => setShowJobLink(true)} />
+               <NavBarLink linkTo="/modern-blackboard/admin" linkTitle="Admin" clickFunc={() => setShowJobLink(false)} />
 
             </NavBar>
          </NavBarContainer>
@@ -74,15 +75,14 @@ const Header = () => {
 
 
          <MainHeader className="header">
-            <div className="header__left">
+            {/* <div className="header__left">
                <H1>Fall 2021</H1>
                <LightP>T.Blake</LightP>
 
-            </div>
+            </div> */}
             <div className="header__right">
 
                <Searchbar />
-
 
             </div>
          </MainHeader>
