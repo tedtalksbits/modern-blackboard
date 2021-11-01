@@ -101,7 +101,7 @@ const Home = () => {
 
                <CardGrid>
                   {courses.map(course => (
-                     <CustomLink to={`/moreinfo/${course.id} ${course.course_name}`} key={course.course_id} color={homeTheme.textdark} >
+                     <CustomLink to={`/modern-blackboard/moreinfo/${course.id} ${course.course_name}`} key={course.course_id} color={homeTheme.textdark} >
                         <CourseCard
 
                            course_name={course.course_name}
