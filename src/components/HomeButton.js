@@ -17,7 +17,7 @@ const Icon = styled.div`
 const HomeButton = ({ icon, innerBg }) => {
    return (
 
-      <A to="/">
+      <A to="/modern-blackboard">
 
          <InnerBox innerBg={innerBg} notification={false} >
             <Icon >
