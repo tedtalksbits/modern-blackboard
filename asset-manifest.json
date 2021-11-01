@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/modern-blackboard/static/css/main.1ff93dee.chunk.css",
-    "main.js": "/modern-blackboard/static/js/main.a907bec7.chunk.js",
-    "main.js.map": "/modern-blackboard/static/js/main.a907bec7.chunk.js.map",
+    "main.js": "/modern-blackboard/static/js/main.1d1b3e4f.chunk.js",
+    "main.js.map": "/modern-blackboard/static/js/main.1d1b3e4f.chunk.js.map",
     "runtime-main.js": "/modern-blackboard/static/js/runtime-main.fd19ac2d.js",
     "runtime-main.js.map": "/modern-blackboard/static/js/runtime-main.fd19ac2d.js.map",
     "static/js/2.41e2e820.chunk.js": "/modern-blackboard/static/js/2.41e2e820.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.fd19ac2d.js",
     "static/js/2.41e2e820.chunk.js",
     "static/css/main.1ff93dee.chunk.css",
-    "static/js/main.a907bec7.chunk.js"
+    "static/js/main.1d1b3e4f.chunk.js"
   ]
 }
