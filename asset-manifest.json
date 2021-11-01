@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/modern-blackboard/static/css/main.1ff93dee.chunk.css",
+    "main.js": "/modern-blackboard/static/js/main.d31e226c.chunk.js",
+    "main.js.map": "/modern-blackboard/static/js/main.d31e226c.chunk.js.map",
+    "runtime-main.js": "/modern-blackboard/static/js/runtime-main.fd19ac2d.js",
+    "runtime-main.js.map": "/modern-blackboard/static/js/runtime-main.fd19ac2d.js.map",
+    "static/js/2.41e2e820.chunk.js": "/modern-blackboard/static/js/2.41e2e820.chunk.js",
+    "static/js/2.41e2e820.chunk.js.map": "/modern-blackboard/static/js/2.41e2e820.chunk.js.map",
+    "index.html": "/modern-blackboard/index.html",
+    "static/css/main.1ff93dee.chunk.css.map": "/modern-blackboard/static/css/main.1ff93dee.chunk.css.map",
+    "static/js/2.41e2e820.chunk.js.LICENSE.txt": "/modern-blackboard/static/js/2.41e2e820.chunk.js.LICENSE.txt",
+    "static/media/Spin-1s-200px.a357df0e.svg": "/modern-blackboard/static/media/Spin-1s-200px.a357df0e.svg",
+    "static/media/business-3d-368.fdbe1e6c.png": "/modern-blackboard/static/media/business-3d-368.fdbe1e6c.png",
+    "static/media/business-3d-casual-life-3d-notifications.2f3eac88.png": "/modern-blackboard/static/media/business-3d-casual-life-3d-notifications.2f3eac88.png",
+    "static/media/business-3d-casual-life-3d-searching-8.6a41b6cd.png": "/modern-blackboard/static/media/business-3d-casual-life-3d-searching-8.6a41b6cd.png",
+    "static/media/casual-life-3d-clock.06e604ae.png": "/modern-blackboard/static/media/casual-life-3d-clock.06e604ae.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fd19ac2d.js",
+    "static/js/2.41e2e820.chunk.js",
+    "static/css/main.1ff93dee.chunk.css",
+    "static/js/main.d31e226c.chunk.js"
+  ]
+}
