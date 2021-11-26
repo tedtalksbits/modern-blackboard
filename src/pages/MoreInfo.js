@@ -59,7 +59,7 @@ const MoreInfo = ({ match }) => {
                      alpha={courseThemes[course.theme_id].alpha}
                      cardsubheader={`Professor: ${course.course_prof[0].prof_name}`}
                      rating={course.course_prof[0].prof_rating}
-                     prof_email={course.course_prof[0].prof_email}
+                     prof_email="test@email.com"
 
                   />
 
